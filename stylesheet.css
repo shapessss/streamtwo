@@ -1,0 +1,33 @@
+body {
+    background-color: #000;
+    color: #fff;
+    top: 0;
+    left: 0;
+}
+
+div.flyer {
+    margin: 10px auto 10px auto;
+    padding: 20px;
+}
+div.flyer img {
+    height: 400px;
+    width: 400px;
+}
+
+div.flyer h3 {
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+div.flyer audio {
+    margin: 5px 0 0 0;
+}
+
+button {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
