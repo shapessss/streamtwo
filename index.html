@@ -3,15 +3,23 @@
     <head>
         <title>Stream 2</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
-        <script src="audioplayer.js"></script>
+        <script src="https://kit.fontawesome.com/53b225c9e3.js"></script>
     </head>
     <body>
-        <div class="flyer">
+        <section>
+            <div class="light"></div>
             <img src="img/global-bass.jpg">
             <h3>Now live: Global Bass Casual Club</h3>
-            <!--<audio controls src="https://stream.streamaudio.de:8000/internet-public-radio"></audio>-->
-            <audio id="myTune" src="https://stream.streamaudio.de:8000/internet-public-radio"></audio>
-            <button type="button"  onclick="aud_play_pause()">Play</button>
-        </div>
+            <!--<audio controls src="https://stream.streamaudio.de:8000/internet-public-radio">Loading...</audio>-->
+            <div class="audioplay-object">
+                    <div class="audioplay-button"></div>
+                    <audio class="audioplay-player" data-apskin="classic">
+                      <!-- AudioPlay2 player. Visit https://strangecube.com/audioplay2/ -->
+                      <source src="https://stream.streamaudio.de:8000/internet-public-radio" />
+                      Your browser doesn't support &lt;audio&gt; element.
+                    </audio>
+            </div>
+            <script src="https://strangecube.com/audioplay2/player/js/audioplay-2.0.0.min.js"></script>
+        </section>
     </body>
 </html>
