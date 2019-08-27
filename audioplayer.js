@@ -1,4 +1,4 @@
-var audio = new Audio("https://stream.streamaudio.de:8000/internet-public-radio");
+const audio = new Audio("https://c2.radioboss.fm:18071/stream");
 
 $('#play-pause-button').on("click",function(){
   if($(this).hasClass('fa-play'))
@@ -11,11 +11,11 @@ $('#play-pause-button').on("click",function(){
    {
      $(this).removeClass('fa-pause');
      $(this).addClass('fa-play');
-     audio.pause();
+     audio.pause()
    }
-});
+})
 
 audio.onended = function() {
-     $("#play-pause-button").removeClass('fa-pause');
-     $("#play-pause-button").addClass('fa-play');
-};
+     $("#play-pause-button").removeClass('fa-pause')
+     $("#play-pause-button").addClass('fa-play')
+}

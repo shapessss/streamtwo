@@ -6,14 +6,18 @@
     }
 }
 
-html, body {
-    background-color: #000;
+body {
+    background-color: #000000;
     color: #fff;
     top: 0;
     left: 0;
     margin: 40px 0 40px 0;
     width: 620px;
     height: 100vh;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
 }
 
 section {
@@ -25,6 +29,57 @@ section {
     text-align: center;
 }
 
+div.flyer {
+    width: 100%;
+    margin: 0 0 -5px 0;
+}
+
+div.flyer img {
+    height: 100%;
+    width: 100%;
+}
+
+div.current-live {
+    padding: 10px 20px 10px 20px;
+
+    background-color: rgba(255, 255, 255, .9)
+}
+
+div.player {
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.player p, span {
+    color: red;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: Roboto;
+}
+
+div.player span {
+    animation: blinker 2s linear infinite;
+    margin: 0 0 0 10px;
+}
+
+div.current-live p{
+    color: #000000;
+    font-family: Roboto;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 18px;
+
+    letter-spacing: .7;
+    font-weight: 700;
+
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+
+}
+
 div.light {
     background-color: red;
     height: 15px;
@@ -32,22 +87,6 @@ div.light {
     border-radius: 50%;
     display: inline-block;
     animation: blinker 2s linear infinite;
-}
 
-section img {
-    margin: 20px 0 10px 0;
-    height: 300px;
-    width: 300px;
-}
-
-section h3 {
-    font-size: 12px;
-    font-family: 'Roboto';
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-div.audioplay-object {
-    display: inline-block;
+    margin: 0 0 25px 0;
 }
