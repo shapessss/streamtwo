@@ -1,21 +1,11 @@
-const audio = new Audio("https://c2.radioboss.fm:18071/stream");
-
-$('#play-pause-button').on("click",function(){
-  if($(this).hasClass('fa-play'))
-   {
-     $(this).removeClass('fa-play');
-     $(this).addClass('fa-pause');
-     audio.play();
-   }
-  else
-   {
-     $(this).removeClass('fa-pause');
-     $(this).addClass('fa-play');
-     audio.pause()
-   }
-})
-
-audio.onended = function() {
-     $("#play-pause-button").removeClass('fa-pause')
-     $("#play-pause-button").addClass('fa-play')
-}
+function aud_play_pause() {
+  var myAudio = document.getElementById("https://c2.radioboss.fm:18071/stream");
+  if (myAudio.paused) {
+    $('#stateicon').removeClass('fa fa-play');
+    $('#stateicon').addClass('fa fa-pause');
+    myAudio.play();
+  } else {
+    $('#stateicon').removeClass('fa fa-pause');
+    $('#stateicon').addClass('fa fa-play');
+    myAudio.pause();
+ }
