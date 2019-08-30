@@ -1,0 +1,96 @@
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
+
+@keyframes blinker-out {
+    0% {
+      opacity: 50;
+    }
+}
+  
+  body {
+      font-family: "IBM Plex Mono";
+      font-size: 16px;
+      line-height: 1.6;
+      
+      background-color: #ffffff;
+      color: #2a2a2a;
+      overflow-x: hidden;
+      overflow-y: hidden;
+  }
+  
+  main {
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+    min-height: 100vh;
+    transition: transform 0.5s;
+  }
+  
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  section div {
+    width: 350px;
+  }
+  
+  section div.content {
+    margin: 0 40px 0 40px;
+  }
+  
+  h1 {
+    font-family: "Young Serif";
+    font-size: 48px;
+    line-height: 1.2;
+    font-family: Helvetica;
+    font-size: 18px;
+    text-transform: uppercase;
+    user-select: none;
+  }
+  
+  p {
+    margin: 20px, 0 20px 0;
+    font-family: Helvetica;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  div.slides {
+    height: 475px;
+    position: relative;
+    height: 50%;
+    width: 50%;
+    background-image: url("img/tamborzao.jpg");
+    background-position: 100% 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  div.info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+
+  div.info div.foot {
+      display: inline-block;
+      text-align: center;
+  }
+
+  div.info span {
+      animation: blinker 2s linear infinite;
+      color: red;
+      margin: 0 0 0 5px;
+  }
+
+  div.info span:hover {
+      animation: blinker-out;
+  }
